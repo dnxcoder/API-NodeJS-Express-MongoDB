@@ -7,8 +7,11 @@ const app = express();
 app.use(bodyParser.json()); // utilizar json na minha aplicação
 app.use(bodyParser.urlencoded({ extended: false})); // permite capturar dados nas urls
 
-require('./controllers/authController')(app); // repassando para o controller o app como como parametro para a funcao no authController 
-require('./controllers/projectController')(app); 
+//require('./app/controllers/authController')(app); // repassando para o controller o app como como parametro para a funcao no authController 
+//require('./app/controllers/projectController')(app); 
+
+require('./app/controllers/index')(app);
+
 
 //app.get('/', (req,res)=> res.send('welcome to the first page of the application'))
 
